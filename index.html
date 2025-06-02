@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Hello, I'm Selçuk Bahadır Candan</h1>
+    <p>Istanbul Aydin University | Computer Engineering | B2205.010097</p>
+  </header>
+
+  <section id="projects">
+    <h2>My Projects</h2>
+
+    <div class="project-grid">
+
+      <div class="project" data-project="bank">
+        <div class="image-container">
+          <img src="images/abc.webp" alt="ATM Project" class="project-img" />
+          <div class="overlay">
+            <span class="project-title">Bank Project</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project" data-project="house">
+        <div class="image-container">
+          <img src="images/abcd.jpg" alt="Real Estate Project" class="project-img" />
+          <div class="overlay">
+            <span class="project-title">House Project</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="project-details" class="hidden">
+    <button id="close-details">Close</button>
+    <div id="details-content"></div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Selçuk Bahadır Candan. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

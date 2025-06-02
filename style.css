@@ -1,0 +1,129 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  color: #333;
+}
+
+header, footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+section {
+  padding: 20px;
+  margin: 10px auto;
+  background: white;
+  border-radius: 8px;
+  max-width: 1000px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Proje kutuları için link stilleri */
+.project {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: #e0e0e0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.project:hover {
+  background: #d1d1d1;
+}
+
+/* Görsel ve üzerine gelen overlay */
+.image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.project-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlay - Başta görünmez */
+.overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  transition: opacity 0.3s ease;
+  border-radius: 8px;
+  pointer-events: none; /* Tıklamayı engelleme */
+}
+
+/* Hoverda overlay görünür */
+.image-container:hover .overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Detay bölüm */
+.hidden {
+  display: none;
+}
+
+#project-details {
+  background: white;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#close-details {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+#close-details:hover {
+  background: #555;
+}
+
+/* Responsive düzen */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 24px;
+  }
+
+  .project-title {
+    font-size: 18px;
+  }
+
+  section {
+    padding: 15px;
+  }
+
+  .project-img {
+    height: 150px;
+  }
+}
